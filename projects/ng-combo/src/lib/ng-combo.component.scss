@@ -1,0 +1,12 @@
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+
+  .input-icon {
+    position: absolute;
+    right: 0;
+    padding: 0 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}

@@ -1,0 +1,4 @@
+:root, :host {
+  --ng-combo-focused-item-bg: orange;
+  --ng-combo-focused-item-fg: red;
+}

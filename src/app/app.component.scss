@@ -1,0 +1,23 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  > div {
+    border: 1px solid lightgray;
+  }
+}
+
+.di-custom-wrapper {
+  display: grid;
+  grid-template-columns: 5ch 1fr;
+
+  & > div {
+    border: 1px solid black;
+    padding: 10px;
+
+    &:first-child{
+      text-align: center;
+    }
+  }
+}

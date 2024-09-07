@@ -1,0 +1,17 @@
+<div #dropdown class="dropdown-wrapper" (mouseleave)="clearFocus()">
+  @if (ngComboComponent.loadingDropdownItems) {
+    <div><i [ngClass]="config.config.styles.loadingIcon"></i> {{config.config.i18n.loadingText}}</div>
+  } @else {
+    @for (item of ngComboComponent.valueList; track item.code; let index = $index) {
+      <div class="dropdown-item" [ngClass]="{'dropdown-item-focus': hoveredItemIndex === index}"
+           (mouseenter)="onItemFocused($event, index)" (click)="onItemSelected(item)">
+        <ng-container
+          *ngTemplateOutlet="dropdownItemTemplate ?? defaultDropdownItem!; context: {$implicit: item}"></ng-container>
+      </div>
+    }
+  }
+</div>
+
+<ng-template #defaultDropdownItem let-item>
+  {{ item.label }}
+</ng-template>

@@ -11,6 +11,11 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    "paths": {
+      "ng-combo": [
+        "./dist/ng-combo"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,

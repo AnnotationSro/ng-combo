@@ -1,0 +1,13 @@
+<div #inputWrapper class="input-wrapper">
+  <input type="text" (focusin)="onDropdownShow()" [readOnly]="!searchable" [ngModel]="label" (ngModelChange)="onQueryChanged()">
+  <i class="input-icon" [ngClass]="inputIconCss"></i>
+</div>
+@if (dropdownVisible) {
+  <ng-combo-dropdown
+                     [dropdownItemTemplate]="dropdownItemTemplateRef"
+                     [inputWrapper]="inputWrapper"
+  ></ng-combo-dropdown>
+}
+
+
+
